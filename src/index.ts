@@ -83,3 +83,4 @@ console.log(optionTotal);
 const arr = (arr1: number, arr2: number): number => arr1 + arr2;
 
 console.log(arr(34, 34));
+
