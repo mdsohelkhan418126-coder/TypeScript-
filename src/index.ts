@@ -119,3 +119,18 @@ const user: UserInterface = {
   phone: 1234567890,
 };
 console.log(user);
+// Extending interfaces
+
+interface Animal {
+  name: string;
+  age: number;
+}
+interface Dog extends Animal {
+  breed: string;
+}
+const dog: Dog = {
+  name: 'Buddy',
+  age: 3,
+  breed: 'Golden Retriever'
+};
+console.log(dog);

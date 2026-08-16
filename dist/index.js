@@ -80,4 +80,10 @@ const user = {
     phone: 1234567890,
 };
 console.log(user);
+const dog = {
+    name: 'Buddy',
+    age: 3,
+    breed: 'Golden Retriever'
+};
+console.log(dog);
 //# sourceMappingURL=index.js.map
