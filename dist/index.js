@@ -71,4 +71,13 @@ console.log(optionTotal);
 // Arrow function
 const arr = (arr1, arr2) => arr1 + arr2;
 console.log(arr(34, 34));
+const user = {
+    name: 'sohel',
+    age: 22,
+    isMarried: false,
+    email: 'sohel@example.com',
+    address: '123 Main St',
+    phone: 1234567890,
+};
+console.log(user);
 //# sourceMappingURL=index.js.map

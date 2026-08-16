@@ -84,3 +84,38 @@ const arr = (arr1: number, arr2: number): number => arr1 + arr2;
 
 console.log(arr(34, 34));
 
+
+
+// type alias and interface
+
+type User = {
+  name: string;
+  age: number;
+  isMarried: boolean;
+};
+
+interface UserInterface {
+  name: string;
+  age: number;
+  isMarried: boolean;
+}
+
+// merge type alias and interface
+
+interface UserInterface {
+  email: string;
+  address: string;
+}
+
+interface UserInterface {
+  phone: number;
+}
+const user: UserInterface = {
+  name: 'sohel',
+  age: 22,
+  isMarried: false,
+  email: 'sohel@example.com',
+  address: '123 Main St',
+  phone: 1234567890,
+};
+console.log(user);
