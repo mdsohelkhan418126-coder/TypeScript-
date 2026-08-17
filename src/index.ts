@@ -49,18 +49,18 @@
 // country = 'balovashi';
 // function
 
-function add(nam: string): string {
-  return `Name${nam}`;
-}
-console.log(add('sohel'));
-// optional
+// function add(nam: string): string {
+//   return `Name${nam}`;
+// }
+// console.log(add('sohel'));
+// // optional
 
-function optional(firsname: string, lastname: string, big?: number): string {
-  return `hi ${firsname} the ${lastname} she is big number ${big}`;
-}
-const optionTotal = optional('sohel', 'khan');
+// function optional(firsname: string, lastname: string, big?: number): string {
+//   return `hi ${firsname} the ${lastname} she is big number ${big}`;
+// }
+// const optionTotal = optional('sohel', 'khan');
 
-console.log(optionTotal);
+// console.log(optionTotal);
 // defaut
 // function defau(nam3: string = 'gust'): string {
 //   return ` hello ${nam3}`;
@@ -80,57 +80,147 @@ console.log(optionTotal);
 // notNever('');
 // Arrow function
 
-const arr = (arr1: number, arr2: number): number => arr1 + arr2;
+// const arr = (arr1: number, arr2: number): number => arr1 + arr2;
 
-console.log(arr(34, 34));
+// console.log(arr(34, 34));
 
+// // type alias and interface
 
+// type User = {
+//   name: string;
+//   age: number;
+//   isMarried: boolean;
+// };
 
-// type alias and interface
+// interface UserInterface {
+//   name: string;
+//   age: number;
+//   isMarried: boolean;
+// }
 
-type User = {
-  name: string;
-  age: number;
-  isMarried: boolean;
+// // merge type alias and interface
+
+// interface UserInterface {
+//   email: string;
+//   address: string;
+// }
+
+// interface UserInterface {
+//   phone: number;
+// }
+// const user: UserInterface = {
+//   name: 'sohel',
+//   age: 22,
+//   isMarried: false,
+//   email: 'sohel@example.com',
+//   address: '123 Main St',
+//   phone: 1234567890,
+// };
+// console.log(user);
+// // Extending interfaces
+
+// interface Animal {
+//   name: string;
+//   age: number;
+// }
+// interface Dog extends Animal {
+//   breed: string;
+// }
+// const dog: Dog = {
+//   name: 'Buddy',
+//   age: 3,
+//   breed: 'Golden Retriever'
+// };
+// console.log(dog);
+
+// // union types and intersection types
+// // union types
+
+// type StringOrNumber = string | number;
+
+// function printValue(value: StringOrNumber): void {
+//   console.log(value);
+// }
+// printValue('Hello');
+// printValue(42);
+
+// // intersection types
+
+// type Person = {
+//   name: string;
+//   age: number;
+// };
+
+// type Employee = {
+//   employeeId: string;
+//   salary: number;
+// };
+
+// type Manager = Person & Employee;
+
+// const manager: Manager = {
+//   name: 'Alice',
+//   age: 30,
+//   employeeId: 'EMP001',
+//   salary: 75000
+// };
+// console.log(manager);
+
+// literal types
+
+type Status = 'active' | 'inactive' | 'banned';
+
+const status: Status = 'active';
+
+console.log(status);
+
+// type narrowing
+
+function printId(id: string | number) {
+  if (typeof id === 'number') {
+    console.log(id.toFixed(0));
+  } else {
+    console.log(id.toUpperCase());
+  }
+}
+printId('hello');
+printId(42);
+// type gruard
+
+// type typeof
+
+function display(value: string | number) {
+  if (typeof value === 'string') {
+    console.log(value.toUpperCase());
+  } else {
+    console.log(value.toFixed(2));
+  }
+}
+display('hello');
+display(3.14159);
+
+// in type guard
+type Car = {
+  drive: () => void;
 };
 
-interface UserInterface {
-  name: string;
-  age: number;
-  isMarried: boolean;
-}
-
-// merge type alias and interface
-
-interface UserInterface {
-  email: string;
-  address: string;
-}
-
-interface UserInterface {
-  phone: number;
-}
-const user: UserInterface = {
-  name: 'sohel',
-  age: 22,
-  isMarried: false,
-  email: 'sohel@example.com',
-  address: '123 Main St',
-  phone: 1234567890,
+type Bike = {
+  ride: () => void;
 };
-console.log(user);
-// Extending interfaces
 
-interface Animal {
-  name: string;
-  age: number;
+function operateVehicle(vehicle: Car | Bike) {
+  if ('drive' in vehicle) {
+    vehicle.drive();
+  } else {
+    vehicle.ride();
+  }
+const car: Car = {
+    drive: () => {
+      console.log('Driving a car');
+    }
+  };
+
+
 }
-interface Dog extends Animal {
-  breed: string;
-}
-const dog: Dog = {
-  name: 'Buddy',
-  age: 3,
-  breed: 'Golden Retriever'
-};
-console.log(dog);
+
+

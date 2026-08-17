@@ -5,85 +5,42 @@
 // // console.log(add('Typescript'));
 // // primitive
 Object.defineProperty(exports, "__esModule", { value: true });
-// // string
-// let name: string = 'sohel';
-// name = 'rana';
-// console.log(name);
-// // number
-// const age: number = 22;
-// console.log(age);
-// // boolean
-// const isPassed: boolean = true;
-// console.log(isPassed);
-// // non-primitive
-// // arry
-// let num: number[] = [34, 56, 74];
-// let nam: string[] = ['allice', 'jhon', 'sujon'];
-// let main: Array<number> = [4, 5, 2, 7];
-// // tuples
-// const namArry: [string, number, boolean] = ['sohel', 22, true];
-// console.log(namArry[0]);
-// // any
-// // let number: any = 'hello';
-// // number = 59
-// // ;
-// // unknown
-// let value: unknown = 'world';
-// if (typeof value == 'string') {
-//   console.log(value.toUpperCase());
-// }
-// // void
-// function all(): void {
-//   console.log('sohel is the bifg');
-// }
-// let nam3: undefined;
-// console.log(nam3);
-// let nam7: null;
-// // type inferess
-// let country: string = 'bangladesh';
-// country = 'balovashi';
-// function
-function add(nam) {
-    return `Name${nam}`;
+const status = 'active';
+console.log(status);
+// type narrowing
+function printId(id) {
+    if (typeof id === 'number') {
+        console.log(id.toFixed(0));
+    }
+    else {
+        console.log(id.toUpperCase());
+    }
 }
-console.log(add('sohel'));
-// optional
-function optional(firsname, lastname, big) {
-    return `hi ${firsname} the ${lastname} she is big number ${big}`;
+printId('hello');
+printId(42);
+// type gruard
+// type typeof
+function display(value) {
+    if (typeof value === 'string') {
+        console.log(value.toUpperCase());
+    }
+    else {
+        console.log(value.toFixed(2));
+    }
 }
-const optionTotal = optional('sohel', 'khan');
-console.log(optionTotal);
-// defaut
-// function defau(nam3: string = 'gust'): string {
-//   return ` hello ${nam3}`;
-// }
-// console.log(defau());
-// // return typeof
-// function sub(sub1: string): void {
-//   console.log('Log', 'she is not return');
-// }
-// sub('');
-// // never
-// function notNever(nim: string): never {
-//   throw new Error('something is wrong');
-// }
-// notNever('');
-// Arrow function
-const arr = (arr1, arr2) => arr1 + arr2;
-console.log(arr(34, 34));
-const user = {
-    name: 'sohel',
-    age: 22,
-    isMarried: false,
-    email: 'sohel@example.com',
-    address: '123 Main St',
-    phone: 1234567890,
-};
-console.log(user);
-const dog = {
-    name: 'Buddy',
-    age: 3,
-    breed: 'Golden Retriever'
-};
-console.log(dog);
+display('hello');
+display(3.14159);
+function operateVehicle(vehicle) {
+    if ('drive' in vehicle) {
+        vehicle.drive();
+    }
+    else {
+        vehicle.ride();
+    }
+    const car = {
+        drive: () => {
+            console.log('Driving a car');
+        }
+    };
+}
 //# sourceMappingURL=index.js.map
