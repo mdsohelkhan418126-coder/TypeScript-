@@ -43,7 +43,7 @@ class BankAccount {
     constructor(name, amount) {
         this.accountName = name;
         this.balance = amount;
-        this.AccountType = "Savings";
+        this.AccountType = 'Savings';
     }
     showBalance() {
         console.log(` hi balance is ${this.balance}`);

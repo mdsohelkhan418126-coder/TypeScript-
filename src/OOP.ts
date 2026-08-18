@@ -39,27 +39,21 @@ user.add();
 const user2 = new Student('Rana', 22);
 console.log(user2.name);
 
-
 // bank account
 
-class BankAccount{
-  public accountName: string,
-  private balance:number
-protected AccountType:string
+class BankAccount {
+  public accountName: string;
+  private balance: number;
+  protected AccountType: string;
 
-  constructor(name:string,amount:number) {
+  constructor(name: string, amount: number) {
     this.accountName = name;
     this.balance = amount;
-  this.AccountType="Savings"
-  
+    this.AccountType = 'Savings';
   }
- public showBalance() {
-  
-  console.log(` hi balance is ${ this.balance}`);
-  
+  public showBalance() {
+    console.log(` hi balance is ${this.balance}`);
   }
-
 }
-const account = new BankAccount('sohel mia', 1000)
+const account = new BankAccount('sohel mia', 1000);
 account.showBalance();
-
