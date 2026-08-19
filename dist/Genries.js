@@ -22,4 +22,10 @@ const calculateArea = (width, height) => {
     return width + height;
 };
 console.log(calculateArea(5, 5));
+function logData(data) {
+    console.log(data);
+}
+logData(123);
+logData("hello dear");
+// contravariance and covariance
 //# sourceMappingURL=Genries.js.map
