@@ -35,3 +35,23 @@ const calculateArea = (width: number, height: number) => {
   return width + height;
 };
 console.log(calculateArea(5, 5));
+
+
+function logData<T>(data:T) {
+console.log(data);
+
+
+}
+logData<number>(123)
+logData<string>("hello dear")
+
+
+// contravariance and covariance
+
+
+
+
+
+
+
+
